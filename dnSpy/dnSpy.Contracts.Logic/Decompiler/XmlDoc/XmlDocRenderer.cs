@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2011 AlphaSierraPapa for the SharpDevelop Team
+// Copyright (c) 2011 AlphaSierraPapa for the SharpDevelop Team
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy of this
 // software and associated documentation files (the "Software"), to deal in the Software
@@ -70,11 +70,11 @@ namespace dnSpy.Contracts.Decompiler.XmlDoc {
 		/// <summary>
 		/// Writes XML documentation
 		/// </summary>
-		/// <param name="output">Destination</param>
+		/// <param name="output">Output</param>
 		/// <param name="xmlDocumentation">XML documentation</param>
 		/// <returns></returns>
-		public static bool WriteXmlDoc(IXmlDocOutput output, string xmlDocumentation) {
-			if (xmlDocumentation == null)
+		public static bool WriteXmlDoc(IXmlDocOutput output, string? xmlDocumentation) {
+			if (xmlDocumentation is null)
 				return false;
 			try {
 				XmlTextReader r = new XmlTextReader(new StringReader("<docroot>" + xmlDocumentation + "</docroot>"));
